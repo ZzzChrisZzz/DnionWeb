@@ -135,6 +135,12 @@ body {
 -------------------------------------------------- */
 /* Not required for template or sticky footer method. */
 
+body{
+    background: url("../img/bodyBG.png") repeat-x left top #fff;
+    margin: 0 auto;
+    font-size: 12px;
+    color: #333;
+}
 .container {
     width: auto;
     max-width: 680px;
@@ -142,7 +148,11 @@ body {
 .container .credit {
     margin: 20px 0;
 }
-
+.my-navbar-head{
+}
+.my-main{
+   background-color: #f7f7f7;
+}
 
 
 

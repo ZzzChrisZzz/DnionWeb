@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta name="description" content="">
-    <meta name="author" content="zhaoyunlong">
+    <meta name="author" content="">
     <link rel="icon" href="../favicon.ico">
     <title>Dnion后台管理系统</title>
     <!-- Bootstrap core CSS -->
@@ -17,7 +17,7 @@
 <body>
 <div id="wrap" class="container-fluid">
     <!--导航-->
-    <nav class="navbar-default navbar">
+    <nav class="navbar-default navbar my-navbar-head">
         <div class="container-fluid">
             <!--导航栏头公司logo-->
             <div class="navbar-header">
@@ -69,9 +69,9 @@
         </div>
     </nav>
     <!--主体-->
-    <div class="row-fluid">
+    <div class="row-fluid my-main">
         <div class="span12">
-            <div class="tabbable" id="tabs-160726">
+            <div class="tabbable" id="tabs-160727">
                 <ul class="nav nav-tabs">
                     <li class="active">
                         <a href="#panel-had" data-toggle="tab">已有证书</a>
@@ -103,7 +103,7 @@
                                     <tbody>
                                     <tr >
                                         <td colspan="4">
-                                            <p align-></p>您还没有证书
+                                            <p>您还没有证书</p>
                                         </td>
                                     </tr>
                                     </tbody>
@@ -126,10 +126,76 @@
                 </div>
             </div>
         </div>
+        <div class="col-lg-4 col-lg-push-2">
+            <button type="button" class="btn-default btn">购买新证书</button>
+            <!-- 导入证书 -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#insert">
+                导入已有证书
+            </button>
+
+            <!-- 模态框 -->
+            <div class="modal fade" id="insert" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">导入证书</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>所需信息</p>
+                            <div class="alert-danger">
+                                <h4>
+                                    提示!
+                                </h4>
+                                <strong>我们需要您证书的名称与您的私匙&nbsp</strong>
+                                <a tabindex="0" class="right" role="button" data-toggle="popover" data-trigger="focus" title="需要他们的原因" data-content="因为就是需要">
+                                为什么需要
+                                </a>
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon" id="add-name">证书名称</span>
+                                <input type="text" class="form-control" placeholder="（必填）只允许英文字母等" aria-describedby="add-name">
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon" id="add-file">证书文件</span>
+                                <textarea class="form-control" placeholder="（必填）pem编码" aria-describedby="add-file"></textarea>
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon" id="add-key">证书私匙</span>
+                                <textarea class="form-control" placeholder="（必填）pem编码" aria-describedby="add-key"></textarea>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                            <button type="button" class="btn btn-primary">保存</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class=""></div>
+
+        </div>
+        <div class="col-lg-4 col-lg-push-2">
+            <!-- 页码 -->
+            <nav aria-label="Page navigation" class="navbar-right">
+                <ul class="pagination">
+                    <li class="disabled">
+                        <a href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li class="disabled">
+                        <a href="#" aria-label="Next" >
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </div>
 </div>
-    <!--页脚-->
-
+<!--页脚-->
 <div id="footer">
     <div class="container">
         <nav class="navbar-default">
@@ -147,6 +213,7 @@
         <p class="muted credit">上海帝联科技</p>
     </div>
 </div>
+
 
 <script src="../js/main.js"></script>
 <script src="../js/vendor/jquery-3.1.1.js"></script>
