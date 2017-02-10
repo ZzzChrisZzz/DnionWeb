@@ -7,7 +7,7 @@
 
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../favicon.ico">
+    <link rel="icon" href="../img/logo1.png">
     <title>Dnion后台管理系统</title>
     <!-- Bootstrap core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -17,7 +17,7 @@
 <body>
 <div id="wrap" class="container-fluid">
     <!--导航-->
-    <nav class="navbar-default navbar my-navbar-head">
+    <nav class="navbar-inverse navbar my-navbar-head">
         <div class="container-fluid">
             <!--导航栏头公司logo-->
             <div class="navbar-header">
@@ -28,7 +28,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="#">
-                    <img alt="Brand" src="../favicon.ico">
+                    <img alt="Dnion" src="../img/logo1.png">
                 </a>
             </div>
             <!--导航栏-->
@@ -36,32 +36,24 @@
                 <ul class="nav navbar-nav">
                     <li><a href="#">公司首页</a></li>
                     <li><a href="../index.html">产品简介</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">后台管理 <span class="caret"></span></a>
+                    <li class="dropdown active">
+                        <a href="./Admi.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">后台管理 <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">已购证书</a></li>
-                            <li><a href="#">未完成订单</a></li>
+                            <li><a href="./Admi.html?had">已购证书</a></li>
+                            <li><a href="./Admi.html?order">未完成订单</a></li>
                             <li role="separator" class="divider"></li>
                             <li class="dropdown-header">其他</li>
-                            <li><a href="#">Separated link</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">购买新证书</a> </li>
+                    <li><a href="./Order.html">购买新证书</a> </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <!--搜索框可以删除-->
-                        <form id="global_search" class="form-search navbar-form">
-                            <input class="input-medium search-query" type="text" name="search"/>
-                            <button type="submit" class="btn">查找</button>
-                        </form>
-                    </li>
                     <!--用户信息-->
                     <li><img class="navbar-btn" src="../img/defautl.png"width="20" height="20"></li>
                     <li class="dropdown">
                         <a id="uName" role="button" data-toggle="dropdown"aria-haspopup="true" aria-expanded="false">UserName</a>
                         <ul class="dropdown-menu">
-                            <li>修改用户信息</li>
+                            <li><a href="UserInfo.html">修改用户信息</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -73,51 +65,49 @@
         <div class="span12">
             <div class="tabbable" id="tabs-160727">
                 <ul class="nav nav-tabs">
-                    <li class="active">
-                        <a href="#panel-had" data-toggle="tab">已有证书</a>
-                    </li>
                     <li>
-                        <a href="#panel-handling" data-toggle="tab">处理订单</a>
+                        <a href="#panel-had" data-toggle="tab">证书管理</a>
+                    </li>
+                    <li class="active">
+                        <a href="#panel-handling" data-toggle="tab">订单管理</a>
                     </li>
                 </ul>
                 <div class="tab-content">
-                    <div class="tab-pane active row-fluid" id="panel-had">
-                            <div class="span12">
-                                <table class="table table-hover table-bordered">
-                                    <thead>
-                                    <tr>
-                                        <th>
-                                            证书编号
-                                        </th>
-                                        <th>
-                                            域名
-                                        </th>
-                                        <th>
-                                            有效期限
-                                        </th>
-                                        <th>
-                                            状态
-                                        </th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr >
-                                        <td colspan="4">
-                                            <p>您还没有证书</p>
-                                        </td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                    <div class="tab-pane " id="panel-had">
+                        <table class="table table-hover table-bordered">
+                            <thead>
+                            <tr>
+                                <th>
+                                    证书编号
+                                </th>
+                                <th>
+                                    域名
+                                </th>
+                                <th>
+                                    有效期限
+                                </th>
+                                <th>
+                                    状态
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr >
+                                <td colspan="4">
+                                    <p>您还没有证书</p>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
                     </div>
-                    <div class="tab-pane" id="panel-handling">
-                        <table>
+                    <div class="tab-pane active" id="panel-handling">
+                        <table class="table table-hover table-bordered">
                             <tr>
                                 <td>名称</td>
                                 <td>订单号</td>
                             </tr>
                             <tr>
-                                <td>
+                                <td colspan="2">
                                     没有未处理订单
                                 </td>
                             </tr>
@@ -127,14 +117,14 @@
             </div>
         </div>
         <div class="col-lg-4 col-lg-push-2">
-            <button type="button" class="btn-default btn">购买新证书</button>
+            <a href="Order.html" type="button" class="btn-default btn">购买新证书</a>
             <!-- 导入证书 -->
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#insert">
                 导入已有证书
             </button>
 
             <!-- 模态框 -->
-            <div class="modal fade" id="insert" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal fade" id="insert" tabindex="-1" role="dialog" aria-labelledby="insertLabel">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -198,25 +188,41 @@
 <!--页脚-->
 <div id="footer">
     <div class="container">
-        <nav class="navbar-default">
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="#">公司首页</a></li>
-                    <li><a href="../index.html">产品简介</a></li>
-                    <li><a href="#">后台管理 </a></li>
-                    <li><a href="#">购买新证书</a> </li>
-                </ul>
-            </div>
-        </nav>
+
     </div>
-    <div class="container">
-        <p class="muted credit">上海帝联科技</p>
+</div>
+<div class="footFull">
+    <div id="foot">
+        <div class="bot">
+            <div class="botMenu">
+                <div class="botMenu">
+                    <nav class="navbar-default">
+                        <div class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="#">公司首页</a></li>
+                                <li><a href="../index.html">产品简介</a></li>
+                                <li><a href="./Admi.html">后台管理 </a></li>
+                                <li><a href="./Order.html">购买新证书</a> </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="foot">
+            <p>Copyright ©2005-2016 All Rights Reserved. 上海帝联信息科技股份有限公司</p>
+            <p>
+                <a href="http://www.dnion.com">增值电信业务经营许可证：B1.B2-20100055</a>
+                <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010702001145">沪公网安备 31010702001145号</a>
+                <a href="http://www.miibeian.gov.cn/state/outPortal/loginPortal.action">沪ICP备06052350号</a>
+            </p>
+        </div>
     </div>
 </div>
 
 
-<script src="../js/main.js"></script>
 <script src="../js/vendor/jquery-3.1.1.js"></script>
 <script src="../js/vendor/bootstrap.js"></script>
+<script src="../js/main.js"></script>
 </body>
 </html>

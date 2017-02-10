@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button type="button" class="btn btn-warning center-block" data-toggle="modal" data-target="#apply">
+    立即申请
+</button>
+<!-- 模态框 -->
+<div class="modal fade" id="apply" tabindex="-1" role="dialog" aria-labelledby="applyLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">申请证书</h4>
+            </div>
+            <div class="modal-body">
+                <p>所选证书参数</p>
+                <table class="table">
+                    <tbody>
+                    <tr>
+                        <td>
+                            证书类型:
+                        </td>
+                        <td><span></span></td>
+                        <td>
+                            选择品牌:
+                        </td>
+                        <td><span></span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            保护类型:
+                        </td>
+                        <td><span></span></td>
+                        <td>
+                            域名个数:
+                        </td>
+                        <td><span></span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            购买数量:
+                        </td>
+                        <td><span></span></td>
+                        <td>
+                            购买时长:
+                        </td>
+                        <td><span></span></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <label id="csr">CSR</label>
+                <textarea aria-label="所购买域名CSR" class="form-control" aria-describedby="csr" placeholder="请粘贴你的CSR"></textarea>
+                <h3>公司/组织信息</h3>
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <label class="input-group-addon">组织名称
+
+                        </label>
+                        <input class="form-control" placeholder="(必填）"/>
+                    </div>
+                    <div class="input-group">
+                        <label class="input-group-addon">
+                            手机号码
+                        </label>
+                        <input class="form-control" placeholder="(必填）"/>
+                    </div>
+                    <div class="input-group">
+                        <label class="input-group-addon">
+                            国家代码
+                        </label>
+                        <input class="form-control" placeholder="(必填）"/>
+                    </div>
+                    <div class="input-group">
+                        <label class="input-group-addon">
+                            部门名称
+                        </label>
+                        <input class="form-control" placeholder="(必填）"/>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+
+                    <div class="input-group">
+                        <label class="input-group-addon">
+                            省市名称
+                        </label>
+                        <input class="form-control" placeholder="(必填）"/>
+                    </div>
+                    <div class="input-group">
+                        <label class="input-group-addon">
+                            市（区）名
+                        </label>
+                        <input class="form-control" placeholder="(必填）"/>
+                    </div>
+                    <div class="input-group">
+                        <label class="input-group-addon">
+                            邮编
+                        </label>
+                        <input class="form-control" placeholder="(必填）"/>
+                    </div>
+                    <div class="input-group">
+                        <label class="input-group-addon">
+                            地址
+                        </label>
+                        <input class="form-control" placeholder="(必填）"/>
+                    </div>
+                </div>
+
+
+                <div class="container-fluid">
+                    <div class="col-lg-6">
+                        <h3>公司联系人</h3>
+                        <div class="input-group">
+                            <label class="input-group-addon">
+                                姓氏
+                            </label>
+                            <input class="form-control" placeholder="(必填）"/>
+                        </div>
+                        <div class="input-group">
+                            <label class="input-group-addon">
+                                姓名
+                            </label>
+                            <input class="form-control" placeholder="(必填）"/>
+                        </div>
+                        <div class="input-group">
+                            <label class="input-group-addon">
+                                职务
+                            </label>
+                            <input class="form-control" placeholder="(必填）"/>
+                        </div>
+                        <div class="input-group">
+                            <label class="input-group-addon">
+                                电话号码
+                            </label>
+                            <input class="form-control"/>
+                        </div>
+                        <div class="input-group">
+                            <label class="input-group-addon">
+                                手机号码
+                            </label>
+                            <input class="form-control" placeholder="(必填）"/>
+                        </div>
+                        <div class="input-group">
+                            <label class="input-group-addon">
+                                电子邮件
+                            </label>
+                            <input class="form-control" placeholder="(必填）"/>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h3>技术联系人</h3>
+                        <div class="input-group">
+                            <label class="input-group-addon">
+                                姓氏
+                            </label>
+                            <input class="form-control" placeholder="(必填）"/>
+                        </div>
+                        <div class="input-group">
+                            <label class="input-group-addon">
+                                姓名
+                            </label>
+                            <input class="form-control" placeholder="(必填）"/>
+                        </div>
+                        <div class="input-group">
+                            <label class="input-group-addon">
+                                头衔
+                            </label>
+                            <input class="form-control" placeholder="(必填）"/>
+                        </div>
+                        <div class="input-group">
+                            <label class="input-group-addon">
+                                电话号码
+                            </label>
+                            <input class="form-control"/>
+                        </div>
+                        <div class="input-group">
+                            <label class="input-group-addon">
+                                手机号码
+                            </label>
+                            <input class="form-control" placeholder="(必填）"/>
+                        </div>
+                        <div class="input-group">
+                            <label class="input-group-addon">
+                                电子邮件
+                            </label>
+                            <input class="form-control" placeholder="(必填）"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">解析CSR</button>
+                <button type="button" class="btn btn-success" data-dismiss="modal">确定</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
